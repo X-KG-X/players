@@ -1,0 +1,10 @@
+
+
+<body class="container mt-5">
+    <h2>Player Status Game {{game}}</h2>
+    <button (click)="game_check1()" class="btn btn-link" [routerLink]="['game1']">Game1</button>
+    <button (click)="game_check2()" class="btn btn-link ml-5" [routerLink]="['game2']">Game2</button>
+    <button (click)="game_check3()" class="btn btn-link ml-5" [routerLink]="['game3']">Game3</button>
+    <router-outlet></router-outlet> 
+
+</body>

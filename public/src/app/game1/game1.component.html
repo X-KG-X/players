@@ -1,0 +1,31 @@
+<table class="table">
+        <thead class="thead-dark">
+            <tr>
+            <th scope="col">Player Name</th>
+            <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor ="let player of players">
+            <td >{{player.name}}</td>
+            <td>
+               <span *ngIf="player.game1=='Playing'" >
+                   <button class="btn btn-success mr-5 " (click)="playing(player)">Playing </button>
+                   <button class="btn btn-secondary mr-5 " (click)="not_playing(player)"> Not Playing </button>
+                   <button class="btn btn-secondary mr-5 " (click)="undecided(player)">Undecided </button>
+               </span> 
+               <span *ngIf="player.game1=='Not Playing'" >
+                    <button class="btn btn-secondary mr-5 " (click)="playing(player)">Playing </button>
+                    <button class="btn btn-danger mr-5 " (click)="not_playing(player)"> Not Playing </button>
+                    <button class="btn btn-secondary mr-5 " (click)="undecided(player)">Undecided </button>
+                </span> 
+                <span *ngIf="player.game1=='Undecided'" >
+                    <button class="btn btn-secondary mr-5 " (click)="playing(player)">Playing </button>
+                    <button class="btn btn-secondary mr-5 " (click)="not_playing(player)"> Not Playing </button>
+                    <button class="btn btn-warning mr-5 " (click)="undecided(player)">Undecided </button>
+                </span> 
+                  
+            </td>
+            </tr>
+        </tbody>
+    </table>

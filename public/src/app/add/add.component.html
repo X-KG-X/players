@@ -1,0 +1,12 @@
+<h2>Add Player</h2>
+<form>
+    <p > Player Name:
+        <input type="text" name="name" [(ngModel)]="player.name" class="form-control">
+    </p>
+    <p *ngIf="error" class="text-danger">{{error}}</p>
+    <p>Preferred Position:
+        <input type="text" name="position" [(ngModel)]="player.position" class="form-control">
+    </p>
+    <input type="submit" value="Add" class="float-right btn btn-success" (click)="add_player()">
+
+</form>
